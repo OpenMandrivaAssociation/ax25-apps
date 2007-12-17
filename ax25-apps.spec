@@ -9,7 +9,6 @@ Release: %{release}
 Source: %{name}-%{version}.tar.bz2
 Group: Communications
 Url: http://ax25.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPL
 Requires: libax25_0 >= 0.0.9  
 Buildrequires: ax25-devel libncurses-devel glibc-static-devel
