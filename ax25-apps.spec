@@ -1,6 +1,6 @@
 %define name ax25-apps
 %define version 0.0.6
-%define release %mkrel 8
+%define release %mkrel 9
 
 Name: %{name}
 Summary: Applications for kernel AX.25 support (kernel >= 2.2)
