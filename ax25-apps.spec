@@ -26,7 +26,7 @@ ax25mond, ax25rtctl, ax25rtd, call, listen.
 
 %build
 
-%configure --localstatedir=/var
+%configure2_5x --localstatedir=/var
 
 %make
 
