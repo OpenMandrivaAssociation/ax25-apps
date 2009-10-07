@@ -1,18 +1,19 @@
 %define name ax25-apps
 %define version 0.0.6
-%define release %mkrel 10
+%define release %mkrel 11
 
 Name: %{name}
-Summary: Applications for kernel AX.25 support (kernel >= 2.2)
 Version: %{version}
 Release: %{release}
-Source: %{name}-%{version}.tar.bz2
+Summary: Applications for kernel AX.25 support (kernel >= 2.2)
 Group: Communications
-Url: http://ax25.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 License: GPL
-Requires: libax25_0 >= 0.0.9  
-Buildrequires: ax25-devel libncurses-devel glibc-static-devel
+Url: http://ax25.sourceforge.net/
+Source: %{name}-%{version}.tar.bz2
+Buildrequires: ax25-devel
+Buildrequires: libncurses-devel
+Buildrequires: glibc-static-devel
+BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 Applications for kernel AX.25 support (kernel >= 2.2).
