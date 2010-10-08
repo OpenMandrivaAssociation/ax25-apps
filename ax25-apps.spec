@@ -1,14 +1,15 @@
 %define name	ax25-apps
 %define version	0.0.8
 %define prerel	rc2
-%define release	1
+%define release	2
 
 Name:		%{name}
 Version:	%{version}
 Release:	%mkrel -c %{prerel} %{release}
 Summary:	Applications for kernel AX.25 support
 Group:		Communications
-License:	GPLv2+
+#ax25ipd is BSD licensed, rest is GPLv2+
+License:	GPLv2+ and BSD
 Url:		http://www.linux-ax25.org/wiki/LinuxAX25
 Source:		http://www.linux-ax25.org/pub/ax25-apps/%{name}-%{version}-%{prerel}.tar.gz
 Patch0:		ax25-apps-0.0.8-nongenericnames.patch
