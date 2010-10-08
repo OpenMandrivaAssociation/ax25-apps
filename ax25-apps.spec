@@ -11,6 +11,7 @@ Group:		Communications
 License:	GPLv2+
 Url:		http://www.linux-ax25.org/wiki/LinuxAX25
 Source:		http://www.linux-ax25.org/pub/ax25-apps/%{name}-%{version}-%{prerel}.tar.gz
+Patch0:		ax25-apps-0.0.8-nongenericnames.patch
 Buildrequires:	ax25-devel
 Buildrequires:	libncurses-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
@@ -19,12 +20,14 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}
 Applications for kernel AX.25 support.
 
 This package is split off from the previous ax25-utils and contains the
-following applications : ax25ipd, ax25mond, ax25rtctl, ax25rtd, call, listen.
+following applications : ax25ipd, ax25mond, ax25rtctl, ax25rtd, axcall, axlisten.
 
 %prep
 %setup -q -n %{name}-%{version}-%{prerel}
+%patch0 -p1 -b .nongenericnames
 
 %build
+autoreconf -vfi
 %configure2_5x
 %make
 
@@ -43,7 +46,6 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/ax25/ax25ipd.conf
 %config(noreplace) %{_sysconfdir}/ax25/ax25mond.conf
 %config(noreplace) %{_sysconfdir}/ax25/ax25rtd.conf
-%{_bindir}/call
-%{_bindir}/listen
+%{_bindir}/ax*
 %{_sbindir}/ax25*
 %{_mandir}/*/*
