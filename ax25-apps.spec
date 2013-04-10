@@ -18,7 +18,8 @@ BuildRequires:	pkgconfig(ncurses)
 Applications for kernel AX.25 support.
 
 This package is split off from the previous ax25-utils and contains the
-following applications : ax25ipd, ax25mond, ax25rtctl, ax25rtd, axcall, axlisten.
+following applications : ax25ipd, ax25mond, ax25rtctl, ax25rtd, axcall,
+axlisten.
 
 %prep
 %setup -q -n %{name}-%{version}-%{prerel}
