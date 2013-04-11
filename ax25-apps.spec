@@ -26,6 +26,7 @@ axlisten.
 %patch0 -p1 -b .nongenericnames
 
 %build
+sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
 autoreconf -vfi
 %configure2_5x
 %make
