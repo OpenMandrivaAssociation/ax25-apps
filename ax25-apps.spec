@@ -1,5 +1,5 @@
 %define prerel	rc2
-%define release	3
+%define release	4
 
 Name:		ax25-apps
 Version:	0.0.8
